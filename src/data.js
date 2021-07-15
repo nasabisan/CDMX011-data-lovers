@@ -9,12 +9,39 @@ export const anotherExample = () => {
 
 import data from './data/rickandmorty/rickandmorty.js';
 const information = {
-    showCharacters() {
+
+    getObject() {
         const characters = data.results.map(function(character) {
             return character;
         });
-        console.log(characters);
-    }
+
+        const firstCharacters = Array.from(characters.slice(0, 9));
+        return firstCharacters;
+    },
+
+
+
+    // showCharacters(object) {
+
+    //     let names;
+    //     let sumaNames = [];
+    //     for (let i = 0; i < 9; i++) {
+    //         names = object[i].name;
+    //         sumaNames += names;
+    //     }
+    //     return sumaNames;
+    // },
+
+    // showImages(object) {
+    //     let images;
+    //     let sumaImages = [];
+    //     for (let i = 0; i < 9; i++) {
+    //         images = object[i].image;
+    //         sumaImages += images;
+    //     }
+    //     return sumaImages;
+    // }
 }
+
 
 export default information
