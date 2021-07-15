@@ -1,9 +1,9 @@
 import information from './data.js';
 
 
-document.getElementById("button").addEventListener("click", function() {
+window.onload = function() {
     showInScreen();
-});
+};
 
 function showInScreen() {
     let muestra;
