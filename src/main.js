@@ -6,15 +6,16 @@ window.onload = function() {
 };
 
 function showInScreen() {
-    let muestra;
     let sumaMuestra = "";
+    const character = information.getObject();
 
     for (let i = 0; i < 9; i++) {
         let id = i
-        muestra = document.getElementById(id.toString()).innerHTML = information.getObject()[i].name + '<img src=' + information.getObject()[i].image + '>';
-        sumaMuestra += muestra;
+        sumaMuestra += "<div class='pruebaDos'>" + "<p class='hijo'>" + character[i].name + '</p> <img class="hijo" src=' + character[i].image + '></div>';
+
     }
-    return sumaMuestra;
+    return document.getElementById("characters").innerHTML = sumaMuestra;
+
     //document.getElementById("root").innerHTML = information.getObject()[1].name + '<img src=' + information.getObject()[1].image + '>';
     //document.getElementById("root").innerHTML = information.getObject()[2].name + '<img src=' + information.getObject()[2].image + '>';
     //document.getElementById("root").innerHTML = information.getObject()[3].name + '<img src=' + information.getObject()[3].image + '>';

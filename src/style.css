@@ -1,33 +1,65 @@
-.button {
-    border-radius: 10px 10px 10px 10px;
-    /*background-color: #3BA720;*/
-    padding: 30px 30px 30px 30px;
-    text-align: center;
-    font-size: 25px;
-    margin-top: 50px;
-    width: 350px;
-    line-height: 20px;
-    color: #FFFFFF;
-    transition-duration: 0.7s;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    cursor: pointer;
-    border: 2px solid #298D1B;
-    background: linear-gradient(90deg, rgba(41, 130, 39, 1) 0%, rgba(108, 204, 6, 1) 50%, rgba(41, 130, 39, 1) 100%);
-}
-
-.button:hover {
-    background: linear-gradient(90deg, rgba(108, 204, 6, 1) 0%, rgba(41, 130, 39, 1) 50%, rgba(108, 204, 6, 1) 100%);
-    color: #FFFFFF;
-    border: 2px solid #6CCC06;
-}
-
-.flex {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.tarjeta {
-    background-color: crimson;
-}
+    .button {
+        border-radius: 10px 10px 10px 10px;
+        /*background-color: #3BA720;*/
+        padding: 30px 30px 30px 30px;
+        text-align: center;
+        font-size: 25px;
+        margin-top: 50px;
+        width: 350px;
+        line-height: 20px;
+        color: #FFFFFF;
+        transition-duration: 0.7s;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        cursor: pointer;
+        border: 2px solid #298D1B;
+        background: linear-gradient(90deg, rgba(41, 130, 39, 1) 0%, rgba(108, 204, 6, 1) 50%, rgba(41, 130, 39, 1) 100%);
+    }
+    
+    .button:hover {
+        background: linear-gradient(90deg, rgba(108, 204, 6, 1) 0%, rgba(41, 130, 39, 1) 50%, rgba(108, 204, 6, 1) 100%);
+        color: #FFFFFF;
+        border: 2px solid #6CCC06;
+    }
+    
+    .flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .prueba {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        align-content: stretch;
+        grid-auto-rows: minmax(400px, 50%);
+        grid-auto-columns: 100px;
+    }
+    
+    .mainBackground {
+        background-image: url("background.jpg");
+        background-size: cover;
+    }
+    
+    .space {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    
+    .pruebaDos {
+        border-radius: 10px 10px 10px 10px;
+        padding: 30px 30px 30px 30px;
+        text-align: center;
+        font-size: 25px;
+        margin-top: 50px;
+        width: 700px;
+        height: 350px;
+        color: black;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        cursor: pointer;
+        border: 5px solid rgb(17, 188, 201);
+        background-color: rgba(255, 250, 250, 0.308);
+    }
