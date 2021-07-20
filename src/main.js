@@ -1,30 +1,42 @@
 import information from './data.js';
+let charactersCounter = 0;
+let i;
 
+const next = document.getElementById('next')
+const prev = document.getElementById('prev')
+const character = information.getObject()
 
 window.onload = function() {
     showInScreen();
-};
-
-function showInScreen() {
-    let sumaMuestra = "";
-    const character = information.getObject();
-
-    for (let i = 0; i < 9; i++) {
-        let id = i
-        sumaMuestra += "<div class='pruebaDos'>" + "<p class='hijo'>" + character[i].name + '</p> <img class="hijo" src=' + character[i].image + '></div>';
-
-    }
-    return document.getElementById("characters").innerHTML = sumaMuestra;
-
-    //document.getElementById("root").innerHTML = information.getObject()[1].name + '<img src=' + information.getObject()[1].image + '>';
-    //document.getElementById("root").innerHTML = information.getObject()[2].name + '<img src=' + information.getObject()[2].image + '>';
-    //document.getElementById("root").innerHTML = information.getObject()[3].name + '<img src=' + information.getObject()[3].image + '>';
-    // information.showCharacters(information.getObject()) + information.showImages(information.getObject());
 }
 
+next.addEventListener('click', function() {
+    charactersCounter += 9
+    showInScreen()
+})
 
-// import data from './data/lol/lol.js';
-//import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
+prev.addEventListener('click', function() {
+    charactersCounter -= 9
+    showInScreen()
+})
 
-//console.log(example, data);
+function showInScreen() {
+
+    let newHTML = "";
+    for (i = 0; i < character.length && i < 9; i++) {
+
+        newHTML += `  <div class='grid'>
+                        <section class='identifier'>
+                        <p>${character[i+charactersCounter].name}</p>
+                        <img class='image' src="${character[i+charactersCounter].image}">
+                        </section>
+                        <section class='properties'>
+                        <p><span class='keys'>Gender: </span> ${character[i+charactersCounter].gender}</p>
+                        <p><span class='keys'>Species: </span>${character[i+charactersCounter].species}</p>
+                        <p><span class='keys'>Status: </span> ${character[i+charactersCounter].status} <span class='dot'>-</span></p>
+                        </section>
+                    </div>`
+    }
+    return document.getElementById("characters").innerHTML = newHTML,
+        changeColor()
+}

@@ -15,7 +15,7 @@ const information = {
             return character;
         });
 
-        const firstCharacters = Array.from(characters.slice(0, 9));
+        const firstCharacters = Array.from(characters);
         return firstCharacters;
     },
 
