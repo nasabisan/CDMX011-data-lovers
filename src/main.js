@@ -2,8 +2,11 @@ import information from './data.js';
 let charactersCounter = 0;
 let i;
 
+let orderBy = document.getElementsByName('option').value
+
 const next = document.getElementById('next')
 const prev = document.getElementById('prev')
+const sort = document.getElementById('sort')
 const character = information.getObject()
 
 window.onload = function() {
@@ -19,6 +22,10 @@ prev.addEventListener('click', function() {
     charactersCounter -= 9
     showInScreen()
 })
+sort.addEventListener('click', function() {
+    console.log(information.sortData(character, orderBy))
+})
+
 
 function showInScreen() {
 
@@ -37,6 +44,24 @@ function showInScreen() {
                         </section>
                     </div>`
     }
-    return document.getElementById("characters").innerHTML = newHTML,
-        changeColor()
+    return document.getElementById("characters").innerHTML = newHTML
+
 }
+//const estado = information.getStatus(character)
+//console.log(estado);
+
+/*function changeColor() {
+    switch (estado) {
+        case 1:
+            console.log('esta vivo')
+            break;
+        case 2:
+            console.log('esta muerto')
+            break
+        case 3:
+            console.log('quien sabe')
+            break
+        default:
+            console.log("default")
+
+    }*/

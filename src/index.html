@@ -1,26 +1,47 @@
 <!DOCTYPE html>
 <html>
+​
 
 <head>
     <meta charset="utf-8">
-    <title>Rickcionario</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="charactersheet" href="characters.html" />
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <title>RICKCIONARIO</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="Shortcut Icon" href="./favicon.png" type="image/x-icon" />
 </head>
+​
 
-<body>
-    <main>
-        <section class="flex">
-            <img class="test" src="rickandmorty.png">
-            <img class="image" id="mainImage" src="rick_morty_PNG24.png">
-            <a href="characters.html"><input class="button" value="¡Toca aquí para empezar!" type="button" id="button"></a>
-        </section>
+<body class="content-background">
+    <header>
+        <nav class="flexSelector">
+            <input class="selector" type="search" placeholder="Buscar un personaje">
+            <label class="label" for="options">Filtrar por:</label>
+            <select id="options" class="selector">
+                <option>Nombre</option>
+                <option>Estado</option>
+                <option>Especie</option>
+                <option>Genero</option>
+                <option>Origen</option>
+            </select>
+            <label class="label" for="sort">Ordenar por:</label>
+            <select id="sort" class="selector">
+                <option name="option" value="1">Nombre A-Z</option>
+                <option name="option" value="2">Nombre Z-A</option>
+                <option name="option" value="3">Id Ascedente</option>
+                <option name="option" value="4">Id Descendente</option>
+                
+            </select>
+        </nav>
+    </header>
+    <section id="characters" class="gridFather content-section"></section>
+    ​
+    <section class="gridFather">
+        <input class="button space" value="Pagina anterior" type="button" id="prev">
+        <input class="button space" value="Pagina siguiente" type="button" id="next">
 
 
-
-    </main>
-
+    </section>
+    <script src="main.js" type="module"></script>
 </body>
+​
 
 </html>
