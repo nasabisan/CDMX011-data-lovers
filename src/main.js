@@ -2,11 +2,19 @@ import information from './data.js';
 let charactersCounter = 0;
 let i;
 
-let orderBy = document.getElementsByName('option').value
 
 const next = document.getElementById('next')
 const prev = document.getElementById('prev')
 const sort = document.getElementById('sort')
+const sortValue = Number(document.getElementById('sort').value)
+console.log(sortValue)
+    //const option1Select = document.getElementById('AZ')
+    //let option1 = Number(document.getElementById('AZ').value)
+    //console.log(option1)
+
+
+
+
 const character = information.getObject()
 
 window.onload = function() {
@@ -23,8 +31,11 @@ prev.addEventListener('click', function() {
     showInScreen()
 })
 sort.addEventListener('click', function() {
-    console.log(information.sortData(character, orderBy))
+    let valores = document.getElementById("sort").value;
+    return information.sortData(character, parseInt(valores)),
+        showInScreen()
 })
+
 
 
 function showInScreen() {
@@ -38,6 +49,7 @@ function showInScreen() {
                         <img class='image' src="${character[i+charactersCounter].image}">
                         </section>
                         <section class='properties'>
+                        <p><span class='keys'>ID: </span> ${character[i+charactersCounter].id}</p>
                         <p><span class='keys'>Gender: </span> ${character[i+charactersCounter].gender}</p>
                         <p><span class='keys'>Species: </span>${character[i+charactersCounter].species}</p>
                         <p><span class='keys'>Status: </span> ${character[i+charactersCounter].status} <span class='dot'>-</span></p>
