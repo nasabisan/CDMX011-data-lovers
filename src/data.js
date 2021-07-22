@@ -1,25 +1,14 @@
-import data from './data/rickandmorty/rickandmorty.js';
-
 const information = {
 
-    getObject() {
-        const characters = data.results.map(function(character) {
-            return character;
-        });
-
-        const firstCharacters = Array.from(characters);
-        return firstCharacters;
-    },
-
     sortData(data, select) {
-        let objeto = data
+        // let objeto = data
         let orderArray;
         switch (select) {
 
             case 1:
                 // Name/Ascendente
 
-                orderArray = objeto.sort(function(a, b) {
+                orderArray = data.sort(function(a, b) {
                     if (a.name < b.name) {
                         return -1
                     }
@@ -34,7 +23,7 @@ const information = {
             case 2:
                 //name/descendente
 
-                orderArray = objeto.sort(function(a, b) {
+                orderArray = data.sort(function(a, b) {
                     if (b.name < a.name) {
                         return -1
                     }
@@ -50,7 +39,7 @@ const information = {
                 //id/ascedente
 
 
-                orderArray = objeto.sort(function(a, b) {
+                orderArray = data.sort(function(a, b) {
                     return (a.id - b.id)
                 })
                 break;
@@ -58,12 +47,13 @@ const information = {
             case 4:
                 //id/descendente
 
-                orderArray = objeto.sort(function(a, b) {
+                orderArray = data.sort(function(a, b) {
                     return (b.id - a.id)
                 })
                 break;
             default:
         }
+
         return orderArray
 
 

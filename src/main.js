@@ -1,10 +1,11 @@
+import data from './data/rickandmorty/rickandmorty.js';
 import information from './data.js';
 
 
 
 let charactersCounter = 0;
 let i;
-const character = information.getObject()
+const character = data.results
     //const status = information.getStatus(character)
     //console.log(status)
 
@@ -29,20 +30,22 @@ console.log(valor)
 window.onload = function() {
     showInScreen(character)
 
+
+
 }
 
-/*next.addEventListener('click', forward())
+//next.addEventListener('click', forward())
 
-function forward() {
+/*function forward() {
     charactersCounter += 9
-        //  showInScreen()
+    showInScreen()
 }
 
-prev.addEventListener('click', backward())
+//prev.addEventListener('click', backward())
 
 function backward() {
     charactersCounter -= 9
-        // showInScreen()
+    showInScreen()
 }*/
 
 sort.addEventListener('click', function() {
@@ -78,48 +81,31 @@ function showInScreen(arreglo) {
                         <p><span class='keys'>ID: </span> ${arreglo[i+charactersCounter].id}</p>
                         <p><span class='keys'>Gender: </span> ${arreglo[i+charactersCounter].gender}</p>
                         <p><span class='keys'>Species: </span>${arreglo[i+charactersCounter].species}</p>
-                        <p><span class='keys'>Status: </span> ${arreglo[i+charactersCounter].status} <span id='dot' class='dot'>-</span></p>
+                        <p><span class='keys'>Status: </span> ${arreglo[i+charactersCounter].status} <span data-status="${arreglo[i].status}" class='dot'>-</span></p>
                         </section>
                     </div>`
     }
-    return document.getElementById("characters").innerHTML = newHTML
+    return document.getElementById("characters").innerHTML = newHTML, changeColor()
 
 }
 
 
 
 
+function changeColor() {
 
-/*function changeColor() {
-    const punto = document.getElementById('dot')
+    const pointElements = document.querySelectorAll('.dot')
+    for (i = 0; i < pointElements.length; i++) {
 
+        if (pointElements[i].dataset.status == "Alive") {
 
-    status.forEach(function(element) {
-        if (element == "Alive") {
-            punto.style.background = 'green';
-            punto.style.color = 'green';
-        } else if (element == "unknown") {
-            punto.style.background = 'yellow';
-            punto.style.color = 'yellow';
-        }
-        console.log('muerto')
-    });
-}
-*/
-/*function changeColor() {
-    // const punto = document.getElementById('dot')
-    let point
-    for (i = 0; i < character.length; i++) {
+            pointElements[i].style.background = 'green';
+            pointElements[i].style.color = 'green';
 
-        if (character[i + charactersCounter].status == "Alive") {
-
-            point = document.getElementById('dot').style.background = 'green', document.getElementById('dot').style.color = 'green';
-            console.log(point)
-        } else if (character[i + charactersCounter].status == "unknown") {
-            point = document.getElementById('dot').style.background = 'yellow', document.getElementById('dot').style.color = 'yellow';
+        } else if (pointElements[i].dataset.status == "unknown") {
+            pointElements[i].style.background = 'yellow';
+            pointElements[i].style.color = 'yellow';
         }
     }
 
-    console.log(point)
-
-};*/
+}
