@@ -6,32 +6,22 @@ import information from './data.js';
 let charactersCounter = 0;
 let i;
 const character = data.results
-    //const status = information.getStatus(character)
-    //console.log(status)
+
 
 //const next = document.getElementById('next');
 //const prev = document.getElementById('prev');
 const sort = document.getElementById('sort');
 const filter = document.getElementById('filter');
 const search = document.getElementById('search')
-const valor = document.getElementById('input').value;
-console.log(valor)
-
-
-
-
-//console.log(getValue())
-
-
+    //const searchValue = document.getElementById('input').value;
+let filterValue = document.getElementById('filter').value;
+let sortValue = document.getElementById('sort').value;
 
 
 
 
 window.onload = function() {
-    showInScreen(character)
-
-
-
+    showInScreen(information.sortData(character, 3))
 }
 
 //next.addEventListener('click', forward())
@@ -49,17 +39,14 @@ function backward() {
 }*/
 
 sort.addEventListener('click', function() {
-    let valores = document.getElementById("sort").value;
-    //return information.sortData(character, parseInt(valores)),
-    return showInScreen(information.sortData(character, parseInt(valores)))
+    filterValue = document.getElementById('filter').value;
+    sortValue = document.getElementById('sort').value;
+    return showInScreen(information.filterData(information.sortData(character, parseInt(sortValue)), parseInt(filterValue)))
 })
 
 filter.addEventListener('click', function() {
-
-    let valores = document.getElementById("filter").value;
-    console.log(valores)
-        //return information.filterData(character, parseInt(valores)),
-    return showInScreen(information.filterData(character, parseInt(valores)))
+    filterValue = document.getElementById('filter').value;
+    return showInScreen(information.filterData(character, parseInt(filterValue)))
 })
 
 search.addEventListener('click', function() {

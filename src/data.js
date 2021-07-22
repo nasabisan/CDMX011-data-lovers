@@ -1,7 +1,7 @@
 const information = {
 
     sortData(data, select) {
-        // let objeto = data
+
         let orderArray;
         switch (select) {
 
@@ -53,7 +53,7 @@ const information = {
                 break;
             default:
         }
-
+        console.log(orderArray)
         return orderArray
 
 
@@ -61,15 +61,16 @@ const information = {
 
     },
     filterData(data, select) {
-        let objeto = data
+
         let filterArray;
         switch (select) {
+
 
             case 1:
                 // Alives
 
-                filterArray = objeto.filter(function(objeto) {
-                    return objeto.status === 'Alive';
+                filterArray = data.filter(function(data) {
+                    return data.status === 'Alive';
                 })
 
                 break;
@@ -77,8 +78,8 @@ const information = {
             case 2:
                 //Deads
 
-                filterArray = objeto.filter(function(objeto) {
-                    return objeto.status === 'Dead';
+                filterArray = data.filter(function(data) {
+                    return data.status === 'Dead';
                 })
 
 
@@ -88,8 +89,8 @@ const information = {
                 //Humans
 
 
-                filterArray = objeto.filter(function(objeto) {
-                    return objeto.species === 'Human';
+                filterArray = data.filter(function(data) {
+                    return data.species === 'Human';
                 })
                 break;
 
@@ -97,8 +98,8 @@ const information = {
                 //Aliens
 
 
-                filterArray = objeto.filter(function(objeto) {
-                    return objeto.species === 'Alien';
+                filterArray = data.filter(function(data) {
+                    return data.species === 'Alien';
                 })
                 break;
 
@@ -106,8 +107,8 @@ const information = {
                 //Humanoid
 
 
-                filterArray = objeto.filter(function(objeto) {
-                    return objeto.species === 'Humanoid'
+                filterArray = data.filter(function(data) {
+                    return data.species === 'Humanoid'
                 })
                 break;
 
@@ -115,16 +116,16 @@ const information = {
                 //Poopybuttholes
 
 
-                filterArray = objeto.filter(function(objeto) {
-                    return objeto.species === 'Poopybutthole'
+                filterArray = data.filter(function(data) {
+                    return data.species === 'Poopybutthole'
                 })
                 break;
             case 7:
                 //Cronenbergs
 
 
-                filterArray = objeto.filter(function(objeto) {
-                    return objeto.species === 'Cronenberg'
+                filterArray = data.filter(function(data) {
+                    return data.species === 'Cronenberg'
                 })
                 break;
 
@@ -132,19 +133,20 @@ const information = {
                 //Males
 
 
-                filterArray = objeto.filter(function(objeto) {
-                    return objeto.gender === 'Male'
+                filterArray = data.filter(function(data) {
+                    return data.gender === 'Male'
                 })
                 break;
             case 9:
                 //Females
 
 
-                filterArray = objeto.filter(function(objeto) {
-                    return objeto.gender === 'Female'
+                filterArray = data.filter(function(data) {
+                    return data.gender === 'Female'
                 })
                 break;
             default:
+                return data
         }
         return filterArray
 
@@ -154,8 +156,7 @@ const information = {
     },
 
     findData(input, data) {
-        // let objeto = data
-        // let enterData = input
+
         let search
 
         search = data.filter(function(data) {
