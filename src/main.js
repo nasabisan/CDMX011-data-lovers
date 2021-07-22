@@ -8,8 +8,8 @@ const character = information.getObject()
     //const status = information.getStatus(character)
     //console.log(status)
 
-const next = document.getElementById('next');
-const prev = document.getElementById('prev');
+//const next = document.getElementById('next');
+//const prev = document.getElementById('prev');
 const sort = document.getElementById('sort');
 const filter = document.getElementById('filter');
 const search = document.getElementById('search')
@@ -28,7 +28,6 @@ console.log(valor)
 
 window.onload = function() {
     showInScreen(character)
-
 
 }
 
@@ -105,15 +104,17 @@ function showInScreen(arreglo) {
         }
         console.log('muerto')
     });
-}*/
-
+}
+*/
 /*function changeColor() {
     // const punto = document.getElementById('dot')
     let point
     for (i = 0; i < character.length; i++) {
 
         if (character[i + charactersCounter].status == "Alive") {
+
             point = document.getElementById('dot').style.background = 'green', document.getElementById('dot').style.color = 'green';
+            console.log(point)
         } else if (character[i + charactersCounter].status == "unknown") {
             point = document.getElementById('dot').style.background = 'yellow', document.getElementById('dot').style.color = 'yellow';
         }
