@@ -13,21 +13,26 @@
 <body class="content-background">
     <header>
         <nav class="flexSelector">
-            <input class="selector" type="search" placeholder="Buscar un personaje">
-            <label class="label" for="options">Filtrar por:</label>
-            <select id="options" class="selector">
-                <option>Nombre</option>
-                <option>Estado</option>
-                <option>Especie</option>
-                <option>Genero</option>
-                <option>Origen</option>
+            <input class="selector" id="input" type="text" placeholder="Search character">
+            <input class="button space" value="Search" type="button" id="search">
+            <label class="label" for="filter">Filter by:</label>
+            <select id="filter" class="selector">
+                <option value="1">Alives</option>
+                <option value="2">Deads</option>
+                <option value="3">Humans</option>
+                <option value="4">Aliens</option>
+                <option value="5">Humanoid</option>
+                <option value="6">Poopybuttholes</option>
+                <option value="7">Cronenbergs</option>
+                <option value="8">Males</option>
+                <option value="9">Females</option>
             </select>
-            <label class="label" for="sort">Ordenar por:</label>
-            <select class="selector">
-                <option  value="1">Nombre A-Z</option>
-                <option  value="2">Nombre Z-A</option>
-                <option  value="3">Id Ascedente</option>
-                <option  value="4">Id Descendente</option>
+            <label class="label" for="sort">Sort By:</label>
+            <select id="sort" class="selector">
+                <option  value="1">Name A-Z</option>
+                <option  value="2">Name Z-A</option>
+                <option  value="3">Id upward</option>
+                <option  value="4">Id downward</option>
                 
             </select>
         </nav>

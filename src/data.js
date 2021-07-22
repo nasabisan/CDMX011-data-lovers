@@ -1,13 +1,5 @@
-/*export const example = () => {
-  return 'example';
-};
-
-export const anotherExample = () => {
-  return 'OMG';
-};*/
-
-
 import data from './data/rickandmorty/rickandmorty.js';
+
 const information = {
 
     getObject() {
@@ -78,57 +70,110 @@ const information = {
 
 
     },
+    filterData(data, select) {
+        let objeto = data
+        let filterArray;
+        switch (select) {
+
+            case 1:
+                // Alives
+
+                filterArray = objeto.filter(function(objeto) {
+                    return objeto.status === 'Alive';
+                })
+
+                break;
+
+            case 2:
+                //Deads
+
+                filterArray = objeto.filter(function(objeto) {
+                    return objeto.status === 'Dead';
+                })
+
+
+                break;
+
+            case 3:
+                //Humans
+
+
+                filterArray = objeto.filter(function(objeto) {
+                    return objeto.species === 'Human';
+                })
+                break;
+
+            case 4:
+                //Aliens
+
+
+                filterArray = objeto.filter(function(objeto) {
+                    return objeto.species === 'Alien';
+                })
+                break;
+
+            case 5:
+                //Humanoid
+
+
+                filterArray = objeto.filter(function(objeto) {
+                    return objeto.species === 'Humanoid'
+                })
+                break;
+
+            case 6:
+                //Poopybuttholes
+
+
+                filterArray = objeto.filter(function(objeto) {
+                    return objeto.species === 'Poopybutthole'
+                })
+                break;
+            case 7:
+                //Cronenbergs
+
+
+                filterArray = objeto.filter(function(objeto) {
+                    return objeto.species === 'Cronenberg'
+                })
+                break;
+
+            case 8:
+                //Males
+
+
+                filterArray = objeto.filter(function(objeto) {
+                    return objeto.gender === 'Male'
+                })
+                break;
+            case 9:
+                //Females
+
+
+                filterArray = objeto.filter(function(objeto) {
+                    return objeto.gender === 'Female'
+                })
+                break;
+            default:
+        }
+        return filterArray
 
 
 
-    /* data.map((dia) => {
-         dia.meses.sort((a, b) => {
-             return a.value > b.value ? -1 : 1
-         })
-         return console.log(dia)
-     })*/
-    /*getStatus(objeto) {
 
-        const arregloStatus = objeto.map(function(element) {
-          let numero;
-            switch (element.status) {
-                case "Alive":
-                    numero= 1;
-                    break;
-                case "Dead":
-                    numero= 2;
-                    break;
-                case "unknown":
-                    numero= 3
-                    break;
-                default:
-            }
+    },
 
-            return numero;
-        })return arregloStatus*/
+    findData(input, data) {
+        // let objeto = data
+        // let enterData = input
+        let search
+
+        search = data.filter(function(data) {
+            return data.name === input
+        })
+        return search
+    }
 }
-
-// showCharacters(object) {
-
-//     let names;
-//     let sumaNames = [];
-//     for (let i = 0; i < 9; i++) {
-//         names = object[i].name;
-//         sumaNames += names;
-//     }
-//     return sumaNames;
-// },
-
-// showImages(object) {
-//     let images;
-//     let sumaImages = [];
-//     for (let i = 0; i < 9; i++) {
-//         images = object[i].image;
-//         sumaImages += images;
-//     }
-//     return sumaImages;
-// }
-
 
 
 export default information
