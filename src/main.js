@@ -13,7 +13,7 @@ const prev = document.getElementById('prev');
 const sort = document.getElementById('sort');
 const filter = document.getElementById('filter');
 const search = document.getElementById('search')
-let valor = document.getElementById('input').value;
+const valor = document.getElementById('input').value;
 console.log(valor)
 
 
@@ -61,7 +61,7 @@ filter.addEventListener('click', function() {
 })
 
 search.addEventListener('click', function() {
-
+    let valor = document.getElementById('input').value;
     return showInScreen((information.findData(valor, character)))
 })
 
