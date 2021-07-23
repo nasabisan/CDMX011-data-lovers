@@ -1,5 +1,5 @@
 body {
-    background-image: url("back8.jpg");
+    background-image: url("background.jpg");
     background-size: cover;
     overflow: hidden;
     margin: 0;
@@ -117,17 +117,19 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(90deg, rgba(108, 204, 6, 0.507) 0%, rgb(17, 188, 201) 50%, rgba(108, 204, 6, 0.473) 100%);
+    background: linear-gradient(90deg, rgba(108, 204, 6, 0.336) 0%, rgba(17, 189, 201, 0.534) 50%, rgba(108, 204, 6, 0.336) 100%);
     height: 7rem;
     width: 98%;
     border: 5px solid #00708a;
     margin-right: 0px;
     text-align: center;
-    font-size: 5rem;
+    font-size: 7rem;
     font-family: 'ZCOOL KuaiLe';
     font-weight: bold;
-    color: rgba(255, 255, 255, 0.637);
+    color: rgba(255, 255, 255, 0.904);
     text-shadow: rgba(0, 0, 0, 0.288) 2px 2px;
+    padding: 2rem 0rem 2rem 0rem;
+    -webkit-text-stroke: 2px #01647a;
 }
 .header-image {
     width: 4rem;
