@@ -8,34 +8,40 @@ let i;
 const character = data.results
 
 
-//const next = document.getElementById('next');
-//const prev = document.getElementById('prev');
+
+
+const next = document.getElementById('next');
+const prev = document.getElementById('prev');
 const sort = document.getElementById('sort');
 const filter = document.getElementById('filter');
-const search = document.getElementById('search')
-    //const searchValue = document.getElementById('input').value;
+const search = document.getElementById('input')
+let searchValue = document.getElementById('input').value;
 let filterValue = document.getElementById('filter').value;
 let sortValue = document.getElementById('sort').value;
 
-
+///const newArray = Array.from(information.filterData(character, parseInt(filterValue)))
+//console.log(newArray)
 
 
 window.onload = function() {
     showInScreen(information.sortData(character, 3))
+    changeSearch(searchValue)
 }
 
-//next.addEventListener('click', forward())
+/*next.addEventListener('click', forward())
 
-/*function forward() {
+function forward() {
     charactersCounter += 9
-    showInScreen()
+    showInScreen(information.filterData(information.sortData(character, parseInt(sortValue)), parseInt(filterValue)))
+
 }
 
-//prev.addEventListener('click', backward())
+prev.addEventListener('click', backward())
 
 function backward() {
     charactersCounter -= 9
-    showInScreen()
+    showInScreen(information.filterData(information.sortData(character, parseInt(sortValue)), parseInt(filterValue)))
+
 }*/
 
 sort.addEventListener('click', function() {
@@ -49,9 +55,9 @@ filter.addEventListener('click', function() {
     return showInScreen(information.filterData(character, parseInt(filterValue)))
 })
 
-search.addEventListener('click', function() {
-    let valor = document.getElementById('input').value;
-    return showInScreen((information.findData(valor, character)))
+search.addEventListener('keyup', function() {
+    searchValue = document.getElementById('input').value;
+    return showInScreen((information.findData(searchValue, character)))
 })
 
 function showInScreen(arreglo) {
@@ -69,11 +75,11 @@ function showInScreen(arreglo) {
                         <p><span class='keys'>Gender: </span> ${arreglo[i+charactersCounter].gender}</p>
                         <p><span class='keys'>Species: </span>${arreglo[i+charactersCounter].species}</p>
                         <p><span class='keys'>Status: </span> ${arreglo[i+charactersCounter].status} <span data-status="${arreglo[i].status}" class='dot'>-</span></p>
+                        <p><span class='keys'>Origin: </span>${arreglo[i+charactersCounter].origin.name}</p>
                         </section>
                     </div>`
     }
     return document.getElementById("characters").innerHTML = newHTML, changeColor()
-
 }
 
 
@@ -86,13 +92,21 @@ function changeColor() {
 
         if (pointElements[i].dataset.status == "Alive") {
 
-            pointElements[i].style.background = 'green';
-            pointElements[i].style.color = 'green';
+            pointElements[i].style.background = '#5EBD3C';
+            pointElements[i].style.color = '#5EBD3C';
 
         } else if (pointElements[i].dataset.status == "unknown") {
-            pointElements[i].style.background = 'yellow';
-            pointElements[i].style.color = 'yellow';
+            pointElements[i].style.background = '#E7E866';
+            pointElements[i].style.color = '#E7E866';
         }
     }
+
+}
+
+function changeSearch() {
+    let str = document.getElementById('input').value
+
+    console.log(typeof(str));
+
 
 }

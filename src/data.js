@@ -53,7 +53,7 @@ const information = {
                 break;
             default:
         }
-        console.log(orderArray)
+
         return orderArray
 
 

@@ -2,6 +2,7 @@ body {
     background-image: url("back8.jpg");
     background-size: cover;
     overflow: hidden;
+    margin: 0;
 }
 
 html {
@@ -12,13 +13,20 @@ main {
     overflow: scroll;
 }
 
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .selector {
     border-radius: 10px 10px 10px 10px;
     padding: 1.5rem;
     text-align: center;
     font-size: 1.5rem;
     margin: 1rem;
-    width: 22rem;
+    width: 14rem;
     line-height: 1rem;
     font-weight: bolder;
     color: rgba(0, 0, 0, 0.568);
@@ -54,14 +62,14 @@ main {
 }
 
 .dot {
-    background: rgb(207, 6, 6);
-    border-radius: 0.8rem;
-    /* -moz-border-radius: 0.8em;
-    -webkit-border-radius: 0.8em; */
+    background: #E85355;
+    border-radius: 1rem;
+    -moz-border-radius: 0.8em;
+    -webkit-border-radius: 0.8em;
     display: inline-block;
-    line-height: 1rem;
-    width: 1rem;
-    color: rgb(207, 6, 6);
+    line-height: 1.5rem;
+    width: 1.5rem;
+    color: #E85355;
 }
 
 .flex {
@@ -103,6 +111,18 @@ main {
     align-content: stretch;
     grid-auto-rows: minmax(20rem, 50%);
     grid-auto-columns: 33rem;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(108, 204, 6, 0.507) 0%, rgb(17, 188, 201) 50%, rgba(108, 204, 6, 0.473) 100%);
+    height: 7rem;
+    width: 98%;
+    border: 5px solid #00708a;
+    margin-right: 0px;
+    text-align: center;
 }
 
 .identifier {
