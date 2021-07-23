@@ -10,8 +10,8 @@ const character = data.results
 
 
 
-const next = document.getElementById('next');
-const prev = document.getElementById('prev');
+//const next = document.getElementById('next');
+//const prev = document.getElementById('prev');
 const sort = document.getElementById('sort');
 const filter = document.getElementById('filter');
 const search = document.getElementById('input')
@@ -109,7 +109,7 @@ function changeSearch() {
     let positioninitial2 = fullname.indexOf(" ") + 1;
     let initial2 = fullname.slice(positioninitial2, positioninitial2 + 1);
     let str = initial1.toUpperCase() + fullname.slice(1, positioninitial2 - 1) + " " + initial2.toUpperCase() + fullname.slice(positioninitial2 + 1, fullname.length)
-    console.log(str);
+        // console.log(str);
     return str
 
 
