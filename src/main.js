@@ -57,7 +57,7 @@ filter.addEventListener('click', function() {
 
 search.addEventListener('keyup', function() {
     searchValue = document.getElementById('input').value;
-    return showInScreen((information.findData(searchValue, character)))
+    return showInScreen((information.findData(changeSearch(), character)))
 })
 
 function showInScreen(arreglo) {
@@ -104,9 +104,13 @@ function changeColor() {
 }
 
 function changeSearch() {
-    let str = document.getElementById('input').value
-
-    console.log(typeof(str));
+    let fullname = document.getElementById('input').value
+    let initial1 = fullname.slice(0, 1);
+    let positioninitial2 = fullname.indexOf(" ") + 1;
+    let initial2 = fullname.slice(positioninitial2, positioninitial2 + 1);
+    let str = initial1.toUpperCase() + fullname.slice(1, positioninitial2 - 1) + " " + initial2.toUpperCase() + fullname.slice(positioninitial2 + 1, fullname.length)
+    console.log(str);
+    return str
 
 
 }
