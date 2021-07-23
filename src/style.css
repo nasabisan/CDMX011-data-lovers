@@ -123,6 +123,17 @@ header {
     border: 5px solid #00708a;
     margin-right: 0px;
     text-align: center;
+    font-size: 5rem;
+    font-family: 'ZCOOL KuaiLe';
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.637);
+    text-shadow: rgba(0, 0, 0, 0.288) 2px 2px;
+}
+.header-image {
+    width: 4rem;
+    height: 4rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .identifier {
@@ -168,7 +179,7 @@ header {
 
 .space {
     margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .content-background {
@@ -179,9 +190,4 @@ header {
 
 .content-section {
     position: relative;
-}
-
-.test {
-    width: 500px;
-    height: 200px;
 }
