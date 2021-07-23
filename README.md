@@ -2,14 +2,14 @@
 
 ## Índice
 
-* [1. Informacion del proyecto](#1-informacion del proyecto)
-* [2. Captura del proyecto final](#2-captura del proyecto final)
-* [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
-* [4. Consideraciones generales](#4-consideraciones-generales)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Hacker edition](#6-hacker-edition)
-* [7. Consideraciones técnicas](#7-consideraciones-técnicas)
-* [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
+* [1. Definicion del producto](#1-definicion-del-producto)
+* [2. Historias de usuario](#2-historias-de-usuario)
+* [3. Captura del proyecto final](#3-captura-del-proyecto-final)
+* [4. Prototipo de alta fidelidad](#4-prototipo-de-alta-fidelidad)
+* [5. Link a Zeplin](#5-link-a-zeplin)
+* [6. Prototipo de baja fidelidad](#6-prototipo-de-baja-fidelidad)
+* [7. Resultados de test de usabilidad](#7-resultados-de-test-de-usabilidad)
+* [8. Indicadores](#8-indicadores)
 * [9. Checklist](#9-checklist)
 
 ***
@@ -29,22 +29,22 @@ personajes que aparecen en pantalla
 ![Historia de usuario 3](H3.jpeg)
 ![Historia de usuario 3](H4.jpeg)
 
-## 2. Captura del proyecto final
+## 3. Captura del proyecto final
 
 ![Imagen del proyecto final](ProyectoFinal.png)
 
-## 3. Prototipo de alta de fidelidad
+## 4. Prototipo de alta fidelidad
 
 ![Imagen del prototipo de alta fidelidad](PrototipoFigma.png)
 
-## 3. Link a Zeplin
+## 5. Link a Zeplin
 
 
-## 4. Prototipo de baja fidelidad
+## 6. Prototipo de baja fidelidad
 
 ![Imagen del prototipo de baja fidelidad](PrototipoBajaFidelidad.jpeg)
 
-## 5. Resultados de test de usabilidad
+## 7. Resultados de test de usabilidad
 
 A cada usuario se le asigno una tarea de filtrado y ordenado en especifico, 
 por ejempl, filtrar por origen y ordenarlo en orden alfabetico. Todos los 
@@ -53,10 +53,10 @@ la tarea solicitada. Solo se hicieron pequeños cambios de diseño despues de la
 iteración que no estaban relacionados con la funcionalidad de la aplicacion pero 
 que mejoraban su experiencia de usuario.
 
-## 6. Indicadores
+## 8. Indicadores
 ![Consola](indicadores.png)
 
-## 7. Checklist
+## 9. Checklist
 
 * [ * ] Usa VanillaJS.
 * [ * ] Pasa linter (`npm run pretest`)
