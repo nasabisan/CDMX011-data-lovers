@@ -12,7 +12,7 @@
 * [8. Indicadores](#8-indicadores)
 * [9. Checklist](#9-checklist)
 
-*
+
 
 ## 1. Definicion del producto
 
