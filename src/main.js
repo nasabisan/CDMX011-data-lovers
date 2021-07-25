@@ -57,7 +57,11 @@ filter.addEventListener('click', function() {
 
 search.addEventListener('keyup', function() {
     searchValue = document.getElementById('input').value;
-    return showInScreen((information.findData(changeSearch(), character)))
+    if (searchValue == "") {
+        return showInScreen(character)
+    } else {
+        return showInScreen((information.findData(changeSearch(), character)))
+    }
 })
 
 function showInScreen(arreglo) {

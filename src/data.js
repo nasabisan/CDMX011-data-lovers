@@ -153,9 +153,12 @@ const information = {
         search = data.filter(function(data) {
             return data.name === input
         })
+
+
         return search
     }
 }
+
 
 
 export default information
