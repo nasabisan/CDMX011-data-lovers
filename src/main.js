@@ -6,8 +6,11 @@ let charactersCounter = 0;
 fetch('./data/rickandmorty/rickandmorty.json')
     .then(response => response.json())
     .then(data => {
-        showInScreen(information.sortData(data.results, 3))
+        showInScreen(data.results)
         changeSearch(searchValue)
+        let filterNUmber = information.filterData(data.results, parseInt(filterValue)).length
+        console.log(filterNUmber)
+
 
 
         sort.addEventListener('click', function() {
@@ -18,7 +21,12 @@ fetch('./data/rickandmorty/rickandmorty.json')
 
         filter.addEventListener('click', function() {
             filterValue = document.getElementById('filter').value;
-            return showInScreen(information.filterData(data.results, parseInt(filterValue)))
+            let filterNumber = information.filterData(data.results, parseInt(filterValue)).length
+            console.log(filterNumber);
+            let showNumber = `<section class='numbers'> There are ${filterNumber}  characters for your selection       
+            </section>`
+            return showInScreen(information.filterData(data.results, parseInt(filterValue))), document.getElementById('computeStats').innerHTML = showNumber;
+
         })
 
         search.addEventListener('keyup', function() {
@@ -42,7 +50,10 @@ let filterValue = document.getElementById('filter').value;
 let sortValue = document.getElementById('sort').value;
 
 
+
 function showInScreen(arreglo) {
+
+
 
     let newHTML = "";
     for (i = 0; i < arreglo.length; i++) {
@@ -60,7 +71,10 @@ function showInScreen(arreglo) {
                         <p><span class='keys'>Origin: </span>${arreglo[i+charactersCounter].origin.name}</p>
                         </section>
                     </div>`
+
+
     }
+
     return document.getElementById("characters").innerHTML = newHTML, changeColor()
 }
 
@@ -68,6 +82,7 @@ function showInScreen(arreglo) {
 
 
 function changeColor() {
+
 
     const pointElements = document.querySelectorAll('.dot')
     for (i = 0; i < pointElements.length; i++) {

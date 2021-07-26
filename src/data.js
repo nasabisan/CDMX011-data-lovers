@@ -3,7 +3,6 @@ const information = {
     sortData(data, select) {
         let orderArray;
         switch (select) {
-
             case 1:
                 // Name/Ascendente
 
