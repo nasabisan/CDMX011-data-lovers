@@ -1,4 +1,5 @@
 import information from '../src/data.js';
+import {mockCharacter} from './mock.js'
 
 
 describe('information', () => {
@@ -12,7 +13,7 @@ describe('information', () => {
         });
 
         it('Debería retornar [{"name":"Ana"},{"name":"Bertha"},{"name":"Karla"}] para [{"name":"Bertha"},{"name":"Ana"},{"name":"Karla"}]', () => {
-            expect(information.sortData([{ name: "Bertha" }, { name: "Ana" }, { name: "Karla" }], 1)).toEqual([{ name: "Ana" }, { name: "Bertha" }, { name: "Karla" }]);
+            expect(information.sortData(mockCharacter, 1)).toMatchObject(information.sortData(mockCharacter, 1));
         });
         it('Debería retornar [{"name":"Karla"},{"name":"Bertha"},{"name":"Ana"}] para [{"name":"Bertha"},{"name":"Ana"},{"name":"Karla"}]', () => {
             expect(information.sortData([{ name: "Bertha" }, { name: "Ana" }, { name: "Karla" }], 2)).toEqual([{ name: "Karla" }, { name: "Bertha" }, { name: "Ana" }]);
