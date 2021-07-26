@@ -1,0 +1,1 @@
+export const dataMockEjemplo = [{ name: "Bertha" }, { name: "Ana" }, { name: "Karla" }]
