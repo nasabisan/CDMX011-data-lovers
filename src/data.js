@@ -1,7 +1,6 @@
 const information = {
 
     sortData(data, select) {
-
         let orderArray;
         switch (select) {
 
@@ -12,11 +11,7 @@ const information = {
                     if (a.name < b.name) {
                         return -1
                     }
-                    if (a.name > b.name) {
-                        return 1
-                    } else {
-                        return 0
-                    }
+
                 })
                 break;
 
@@ -27,11 +22,7 @@ const information = {
                     if (b.name < a.name) {
                         return -1
                     }
-                    if (b.name > a.name) {
-                        return 1
-                    } else {
-                        return 0
-                    }
+
                 })
                 break;
 
@@ -162,9 +153,12 @@ const information = {
         search = data.filter(function(data) {
             return data.name === input
         })
+
+
         return search
     }
 }
+
 
 
 export default information

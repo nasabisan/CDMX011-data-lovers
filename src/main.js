@@ -1,17 +1,39 @@
-import data from './data/rickandmorty/rickandmorty.js';
-import information from './data.js';
-
-
-
-let charactersCounter = 0;
+import information from '/data.js'
 let i;
-const character = data.results
+let charactersCounter = 0;
 
 
+fetch('./data/rickandmorty/rickandmorty.json')
+    .then(response => response.json())
+    .then(data => {
+        showInScreen(information.sortData(data.results, 3))
+        changeSearch(searchValue)
 
 
-//const next = document.getElementById('next');
-//const prev = document.getElementById('prev');
+        sort.addEventListener('click', function() {
+            filterValue = document.getElementById('filter').value;
+            sortValue = document.getElementById('sort').value;
+            return showInScreen(information.filterData(information.sortData(data.results, parseInt(sortValue)), parseInt(filterValue)))
+        })
+
+        filter.addEventListener('click', function() {
+            filterValue = document.getElementById('filter').value;
+            return showInScreen(information.filterData(data.results, parseInt(filterValue)))
+        })
+
+        search.addEventListener('keyup', function() {
+            searchValue = document.getElementById('input').value;
+            if (searchValue == "") {
+                return showInScreen(data.results)
+            } else {
+                return showInScreen((information.findData(changeSearch(), data.results)))
+            }
+        })
+
+
+    })
+
+
 const sort = document.getElementById('sort');
 const filter = document.getElementById('filter');
 const search = document.getElementById('input')
@@ -19,46 +41,6 @@ let searchValue = document.getElementById('input').value;
 let filterValue = document.getElementById('filter').value;
 let sortValue = document.getElementById('sort').value;
 
-///const newArray = Array.from(information.filterData(character, parseInt(filterValue)))
-//console.log(newArray)
-
-
-window.onload = function() {
-    showInScreen(information.sortData(character, 3))
-    changeSearch(searchValue)
-}
-
-/*next.addEventListener('click', forward())
-
-function forward() {
-    charactersCounter += 9
-    showInScreen(information.filterData(information.sortData(character, parseInt(sortValue)), parseInt(filterValue)))
-
-}
-
-prev.addEventListener('click', backward())
-
-function backward() {
-    charactersCounter -= 9
-    showInScreen(information.filterData(information.sortData(character, parseInt(sortValue)), parseInt(filterValue)))
-
-}*/
-
-sort.addEventListener('click', function() {
-    filterValue = document.getElementById('filter').value;
-    sortValue = document.getElementById('sort').value;
-    return showInScreen(information.filterData(information.sortData(character, parseInt(sortValue)), parseInt(filterValue)))
-})
-
-filter.addEventListener('click', function() {
-    filterValue = document.getElementById('filter').value;
-    return showInScreen(information.filterData(character, parseInt(filterValue)))
-})
-
-search.addEventListener('keyup', function() {
-    searchValue = document.getElementById('input').value;
-    return showInScreen((information.findData(changeSearch(), character)))
-})
 
 function showInScreen(arreglo) {
 

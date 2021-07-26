@@ -61,4 +61,14 @@ describe('information', () => {
             expect(information.filterData([{ name: "Raul", gender: "Male" }, { name: "Ana", gender: "Female" }, { name: "Carlos", gender: "Male" }], 0)).toEqual([{ name: "Raul", gender: "Male" }, { name: "Ana", gender: "Female" }, { name: "Carlos", gender: "Male" }]);
         });
     });
+    describe('information.findData', () => {
+        it('information.findData debería ser una funcion', () => {
+            expect(typeof information.sortData).toBe('function');
+        });
+
+        it('Debería retornar [{ name : "Ana", gender: "Female" }] para [{ name: "Raul", gender: "Male" }, { name: "Ana", gender: "Female" }, { name: "Carlos", gender: "Male" }]', () => {
+            expect(information.findData("Ana", [{ name: "Raul", gender: "Male" }, { name: "Ana", gender: "Female" }, { name: "Carlos", gender: "Male" }])).toEqual([{ name: "Ana", gender: "Female" }]);
+        });
+
+    });
 });

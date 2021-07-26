@@ -12,7 +12,7 @@
 * [8. Indicadores](#8-indicadores)
 * [9. Checklist](#9-checklist)
 
-***
+
 
 ## 1. Definicion del producto
 
@@ -63,11 +63,11 @@ que mejoraban su experiencia de usuario.
 * [ * ] Pasa tests (`npm test`)
 * [ * ] Pruebas unitarias cubren un mínimo del 70% de statements, functions y
   lines y branches.
-* [ * ] Incluye _Definición del producto_ clara e informativa en `README.md`.
+* [ * ] Incluye Definición del producto clara e informativa en `README.md`.
 * [ * ] Incluye historias de usuario en `README.md`.
-* [ * ] Incluye _sketch_ de la solución (prototipo de baja fidelidad) en
+* [ * ] Incluye sketch de la solución (prototipo de baja fidelidad) en
   `README.md`.
-* [ * ] Incluye _Diseño de la Interfaz de Usuario_ (prototipo de alta fidelidad)
+* [ * ] Incluye Diseño de la Interfaz de Usuario (prototipo de alta fidelidad)
   en `README.md`.
 * [ * ] Incluye link a Zeplin en `README.md`.
 * [ * ] Incluye el listado de problemas que detectaste a través de tests de
@@ -75,4 +75,4 @@ que mejoraban su experiencia de usuario.
 * [ * ] UI: Muestra lista y/o tabla con datos y/o indicadores.
 * [ * ] UI: Permite ordenar data por uno o más campos (asc y desc).
 * [ * ] UI: Permite filtrar data en base a una condición.
-* [ * ] UI: Es _responsive_.
+* [ * ] UI: Es responsive.
